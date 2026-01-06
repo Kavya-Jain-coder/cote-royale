@@ -4,16 +4,19 @@ import { cn } from "../lib/utils";
 const skills = [
   // all
   {
+    id: 1,
     name: "Python",
     level: "90",
     category: "all",
   },
   {
+    id: 2,
     name: "Data Structures and Algorithms",
     level: "80",
     category: "all",
   },
   {
+    id: 3,
     name: "Pandas",
     level: "75",
     category: "all",
@@ -21,36 +24,43 @@ const skills = [
 
   // Frontend
   {
+    id: 4,
     name: "HTML/CSS",
     level: "90",
     category: "Frontend",
   },
   {
+    id: 5,
     name: "JavaScript",
-    level: "75",
+    level: "85",
     category: "Frontend",
   },
   {
+    id: 6,
     name: "React",
-    level: "75",
+    level: "85",
     category: "Frontend",
   },
   {
+    id: 7,
     name: "Tailwind CSS",
-    level: "75",
+    level: "85",
     category: "Frontend",
   },
   {
+    id: 8,
     name: "Three.js",
-    level: "50",
+    level: "65",
     category: "Frontend",
   },
   {
+    id: 9,
     name: "Next.js",
-    level: "75",
+    level: "85",
     category: "Frontend",
   },
   {
+    id: 10,
     name: "TypeScript",
     level: "50",
     category: "Frontend",
@@ -58,63 +68,75 @@ const skills = [
 
   // Backend
   {
+    id: 11,
     name: "Node.js",
-    level: "0",
+    level: "50",
     category: "Backend",
   },
   {
+    id: 12,
     name: "Express.js",
-    level: "0",
+    level: "90",
     category: "Backend",
   },
   {
+    id: 13,
     name: "MongoDB",
-    level: "0",
+    level: "90",
     category: "Backend",
   },
   {
+    id: 14,
     name: "MySQL",
-    level: "0",
+    level: "90",
     category: "Backend",
   },
 
   // Tools
   {
+    id: 15,
     name: "Git/GitHub",
     level: "80",
     category: "Tools",
   },
   {
+    id: 16,
     name: "Figma",
     level: "75",
     category: "Tools",
   },
   {
+    id: 17,
     name: "VS Code",
     level: "95",
     category: "Tools",
   },
   {
+    id: 18,
     name: "Cursor",
     level: "90",
     category: "Tools",
   },
   {
+    id: 19,
     name: "Vensim",
     level: "80",
     category: "Tools",
   },
   {
+    id: 20,
     name: "Blender",
     level: "30",
     category: "Tools",
   },
   {
+    id: 21,
     name: "Prismic",
     level: "70",
     category: "Tools",
   },
   {
+    id: 22,
     name: "Scratch",
     level: "90",
     category: "Tools",
@@ -138,9 +160,9 @@ export const SkillsSection = () => {
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, key) => (
+          {categories.map((category, id) => (
             <button
-              key={key}
+              key={id}
               className={cn(
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                 activeCategory === category
@@ -155,9 +177,9 @@ export const SkillsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map((skill, key) => (
+          {filteredSkills.map((skill, id) => (
             <div
-              key={key}
+              key={id}
               className="bg-card p-6 rounded-lg shadow-xs card-hover"
             >
               <div className="text-left mb-4">
